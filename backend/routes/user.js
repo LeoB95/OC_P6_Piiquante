@@ -4,11 +4,7 @@ const express = require('express');
 const router = express.Router();
 /* IMPORT USER CONTROLLER */
 const userCtrl = require('../controllers/user');
-/* IMPORT USER ROUTES */ 
-const userRoutes = require('./routes/user');
-
-app.use('/api/sauce', sauceRoutes);
-app.use('/api/auth', userRoutes);
+/* IMPORT USER ROUTES */  
 router.post('/signup', userCtrl.signup);
 router.post('/login', userCtrl.login);
 
