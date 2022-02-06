@@ -5,7 +5,11 @@ const bodyParser = require('body-parser');
 /* IMPORT ROUTEUR */
 const saucefRoutes = require('./routes/sauce');
 const path = require('path');
-/* IMPORT MONGODB */ 
+const sauceRoutes = require('./routes/sauce');
+const userRoutes = require('./routes/user');
+
+ /* IMPORT MONGODB */ 
+
 const mongoose = require('mongoose'); 
 /* CONNEXION A MONGODB DATABASE */ 
 mongoose.connect('mongodb+srv://leo_user_2021:9232092320OC@cluster0.va9ea.mongodb.net/PiquanteDataBase?retryWrites=true&w=majority',
