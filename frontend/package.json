@@ -1,17 +1,15 @@
 {
   "name": "hot-takes",
   "version": "1.0.0",
-  "description": "",
+  "description": "projet 6 clone du frontend du github OC",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node node_modules/live-server/live-server --port=8081"
+      "start": "node node_modules/live-server/live-server --port=8081"
   },
-  "author": "",
+  "author": "Leo Blanchon",
   "license": "ISC",
   "dependencies": {
-    "@angular/cli": "^13.2.2",
     "concurrently": "^7.0.0",
-     "live-server": "^1.1.0"
-  }
+     "live-server": "^1.1.0" 
+   }
 }
