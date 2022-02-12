@@ -1,4 +1,8 @@
  
+ //passeport-jwt
+//cors
+
+
 const express = require('express');
 
 const app = express();
@@ -37,22 +41,24 @@ app.use('/api/stuff', (req, res, next) => {
 const mongoose = require('mongoose'); 
 const uniqueValidator = require('mongoose-unique-validator');
 
-const userSchema = mongoose.Schema({
-  email: { type: String, required: true, unique: true },
-  password: { type: String, required: true }
-});
 
-userSchema.plugin(uniqueValidator);
-
-module.exports = mongoose.model('User', userSchema);
 /* CONNEXION A MONGODB DATABASE */ 
-mongoose.connect('mongodb+srv://leo_user_2021:9232092320OC@cluster0.va9ea.mongodb.net/PiquanteDataBase?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://leo2022:leoProject6@cluster0.va9ea.mongodb.net/PiquanteDataBase?retryWrites=true&w=majority',
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
-   
+  const userSchema = mongoose.Schema({
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true }
+  });
+  
+  userSchema.plugin(uniqueValidator);
+  
+  module.exports = mongoose.model('User', userSchema);
+
   const Thing = require('./models/thing');
+  
   const stuffRoutes = require('./routes/stuff');
   app.use('/api/stuff', stuffRoutes);
   const userRoutes = require('./routes/user');
