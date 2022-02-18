@@ -1,3 +1,9 @@
+const jwt = require('jsonwebtoken');
+const fs = require('fs');
+const User = require("../models/user");
+const bcrypt = require('bcrypt')
+ const cryptojs = require('crypto-js'); 
+
 exports.login = (req, res, next) => {
     User.findOne({ email: req.body.email })
       .then(user => {
@@ -35,5 +41,4 @@ exports.signup = (req, res, next) => {
       })
       .catch(error => res.status(500).json({ error }));
   };
-  const jwt = require('jsonwebtoken');
-  const fs = require('fs');
+ 
