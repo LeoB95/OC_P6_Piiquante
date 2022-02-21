@@ -1,11 +1,14 @@
+//IMPORT DES DEPENDANCES
 const express = require("express");
+const app = express(); 
 const mongoose = require("mongoose");
-const helmet = require('helmet');
-const path = require("path"); 
-const userRoutes = require('./routes/user')
-const sauceRoutes = require('./routes/sauce');
 const uniqueValidator = require('mongoose-unique-validator');
+const helmet = require('helmet'); 
+const path = require("path"); 
 
+//IMPORT ROUTES
+const userRoutes = require('./routes/user')
+const sauceRoutes = require('./routes/sauce'); 
 
 /* CONNEXION A MONGODB DATABASE */ 
 mongoose.connect('mongodb+srv://leo2022:leoProject6@cluster0.cphjh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
@@ -18,9 +21,7 @@ mongoose.connect('mongodb+srv://leo2022:leoProject6@cluster0.cphjh.mongodb.net/m
     password: { type: String, required: true }
   });
   
-  userSchema.plugin(uniqueValidator);
-  
- const app = express();
+  userSchema.plugin(uniqueValidator); 
 
 app.use(helmet());
 app.use((req, res, next) => {
@@ -38,8 +39,7 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-app.use('/images', express.static(path.join(__dirname, 'images')))
-
+app.use('/images', express.static(path.join(__dirname, 'images'))) 
 app.use('/api/auth', userRoutes);
 app.use('/api/sauces', sauceRoutes)
  
