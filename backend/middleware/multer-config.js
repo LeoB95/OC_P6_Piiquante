@@ -25,7 +25,6 @@ const fileFilter = (req, file, callback) => {
   } else {
     callback("Erreur : Mauvais type de fichier", false);
   }
-};
 
 
 module.exports = multer({
@@ -33,3 +32,4 @@ module.exports = multer({
   limits: { fileSize: 104857600 }, // Taille image max 100 Mo
  }),
  single("image"); // Seulement 1 image authorisée
+};
