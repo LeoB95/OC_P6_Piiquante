@@ -1,5 +1,5 @@
 # P6_LeoBlanchon_01022022
-Projet 6 - Piiquante
+Projet 6 - Piiquante :fire: 
 
 
 Pour pouvoir lancer l'API, il faut: 
