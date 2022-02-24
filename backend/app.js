@@ -2,7 +2,8 @@
 const express = require("express");
 const app = express(); 
 const mongoose = require("mongoose");
-const uniqueValidator = require('mongoose-unique-validator');
+ const uniqueValidator = require('mongoose-unique-validator');
+ 
 const helmet = require('helmet'); 
 const path = require("path"); 
 

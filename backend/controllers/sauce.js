@@ -1,6 +1,6 @@
 const Sauce = require("../models/Sauce");
 const fs = require('fs');
-
+  
 exports.getAllSauces = (req, res, next) => {
   Sauce.find()
     .then((sauces) => res.status(200).json(sauces))
