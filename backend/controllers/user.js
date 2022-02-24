@@ -1,8 +1,6 @@
-const jwt = require('jsonwebtoken');
-const fs = require('fs');
-const User = require("../models/user");
-const bcrypt = require('bcrypt')
- const cryptojs = require('crypto-js'); 
+const User = require("../models/user"); 
+const bcrypt = require('bcrypt'); 
+const jwt = require('jsonwebtoken'); 
 
 exports.login = (req, res, next) => {
     User.findOne({ email: req.body.email })

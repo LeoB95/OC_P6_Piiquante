@@ -1,6 +1,5 @@
 const jwt = require('jsonwebtoken');
-const mongoose = require('mongoose');
- 
+  
 
 module.exports = (req, res, next) => {
   try {
@@ -8,7 +7,7 @@ module.exports = (req, res, next) => {
     const decodedToken = jwt.verify(token, process.env.SECRET_TOKEN);
     const userId = decodedToken.userId;
     if (req.body.userId && req.body.userId !== userId) {
-      throw 'Invalid user ID';
+      throw 'Les identifiants sont invalides';
     } else {
       next();
     }
