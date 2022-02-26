@@ -1,3 +1,7 @@
+ 
+const rateLimit = require('express-rate-limit');
+require('dotenv').config();
+
 //IMPORT DES DEPENDANCES
 const express = require("express");
 const app = express(); 
@@ -44,4 +48,4 @@ app.use('/images', express.static(path.join(__dirname, 'images')))
 app.use('/api/auth', userRoutes);
 app.use('/api/sauces', sauceRoutes)
  
-module.exports = app;
+module.exports = app; 
