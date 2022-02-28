@@ -1,33 +1,15 @@
-# Piiquante The Hottest Reviews
-![Piiquante](https://user-images.githubusercontent.com/72757068/138886696-b2949b5f-4d87-4eda-969f-e31d82e2a858.PNG)
+Projet 6 - Piiquante 🔥
 
+Pour pouvoir lancer l'API, il faut:
 
-## Ce projet est basé sur la création du backend pour un site de critiques de sauces piquantes.
-J'ai utilisé Node.js accompagné du framework Express.js ainsi que divers packages.
+1/ Télécharger ou cloner ce repository
 
-## Pour que cela fonctionne chez vous:
+2/ Installer node dans le dossier "frontend" avec la commande "npm install" 3/ Lancer le serveur du frontend avec la commande "npm run start"
 
-Tout d'abord cloner ce repository pour le frontend
+4/ Initialiser npm dans le dossier "backend" avec la commande "npm init"
+5/ Lancer le serveur du backend avec la commande "nodemon run start" 6/ Vérifier que vous êtes bien connecté au serveur avec le message dans la console nodemon "Connexion à MongoDB réussie !" apparaît
 
-`git clone https://github.com/OpenClassrooms-Student-Center/Web-Developer-P6`
+Vous pouvez dès à présent vous inscrire et vous authentifier sur PIIQUANTE de manière sécurisée (cryptage des informations d'authentification) 
+8/ Cliquer sur "add sauce" pour créer une nouvelle publication 9/ Cliquer sur "sauce" pour voir la bibliothèque des sauces piquantes qui ont été publié 11/ Vous pouvez aussi commenter les publications des autres utilisateurs et liker les contenus de la bibliothèque selon vos sauces préférées !
 
-Ensuite cloner ce repository pour le backend
-
-`git clone https://github.com/Maxwell-gith/MaximeHery_6_17092021`
-
-Ajouter un dossier nommé "images" dans le backend
-
-Démarrer le serveur sur le dossier backend
-
-`cd backend` 
-
-`nodemon server`
-
-Démarrer le frontend
-
-`cd frontend`
-
-`npm start`
-
-### Bonne visite!
-
+Cliquer sur "log out" pour vous déconnecter
